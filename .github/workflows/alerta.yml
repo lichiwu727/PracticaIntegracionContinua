@@ -17,6 +17,8 @@ jobs:
 
       - name: Enviar notificación a ntfy
         run: |
-          curl -H "Title: Push a main" \
-               -d "Nuevo push en ${{ github.repository }} por ${{ github.actor }}: ${{ github.event.head_commit.message }}" \
+          curl -H "Title: Practicando la integracion continua!" \
+               -d "Nuevo push en ${{ github.repository }}
+               por ${{ github.actor }}:
+               ${{ github.event.head_commit.message }}" \
                https://ntfy.sh/devops-itla
